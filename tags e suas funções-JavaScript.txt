@@ -1,0 +1,554 @@
+-----IMPORTANTE-----
+	a ordem dos fatores altera o produto final.
+
+	Erros aparecerão no console.
+
+	usar ; no fim.
+
+	+ serve como concatenador.
+
+	"\n" quebra a linha.
+
+	+	 	// Concatenar (JS não possui interpolação).
+
+	"bla ${var}"	// Com template string fica mais simples que concatenação.
+	
+	/* */	// Comentario em bloco.
+	
+	//	// Comentário em linha.
+
+	<script scr="script.js"></script>	// Importa o arquivo de JavaScript para o index.html
+
+
+MODO DE USO:
+
+<html>
+<head>
+	<title> vai senta na cabeça </title>
+	<meta charset="utf-8"/>	
+	<script>
+			console.log("Ola, Mundo!");		/// aparece ola mundo quando olhar no console (bagulho do criador la)
+	</script>
+</head>
+<body>
+	<h1> Olá, Mundo! </h1>
+</body>
+</html>
+
+	
+--------------------
+-----RECURSOS DE ESCRITA-----
+
+
+	<script> e </script>:					// Tudo que estiver dentro dessas tags sera cosiderado como comandos JavaScript.
+
+	console.log("mensagem");				// Escreve uma mensagem no console.
+
+	console.table(objeto);					// Cria uma tabela com os atributos do objeto.
+
+	alert("mensagem");					// Uma alerta ira aparecer com a mensagem passada.
+
+	confirm("mensagem");					// Um botão confirma ira aparecer junto da mensagem.
+
+	prompt("mensagem");					// Uma text área ira aparecer junto da mensagem em um alerta.
+
+	document.writeln("mensagem");				// Ira escrever uma mensagem como um print e ira quebrar a linha.
+
+	document.write("<h2> Olá, hoje é dia ${Date()} </h2>");	// Mostra a data do computador.
+
+	():							// Tudo que estiver entre () sao parametros. (note que 'arquivo' é uma variavel).
+		por exemplo: function bla (tipo){
+				if ( tipo == 1){
+					arquivo = "_imagem/lampada-apagada.jpg";
+				}
+				if (tipo == 2){ 
+					arquivo = "_imagem/lampada-acesa.jpg";
+				}
+				document.getElementById("luz"). src = arquivo;
+
+	{}:								// tudo que estiver entre {} sao codigos.
+
+	<img scr="" onclick=" nome da function ()"/>:			// quando o objeto for clicado a ação function ira acontecer.
+
+	<img scr="" onmousemove=" nome da function ()"/>:		// quando o mouse passar por cima do objeto a ação function sera acionada.
+
+	<img scr="" onmouseout=" nome da function ()"/>:		// quando o mouse sair de cima do objeto a ação function sera acionada.
+
+----- DOM (Document Object Model):
+	
+	----- getEelement:	
+		// Seleciona o elemento do html.
+		
+		1) TAGNAME:	
+		document.getElementsByTagName("Nome da tag")[0]			// Pega a primeira tag com aquele nome.
+
+		2) ID:
+		document.getElementById("id do elemento"):			// Pega o elemento e oq for colocado dps acontecera com tal elemento.
+	
+		3) NAME:
+		document.getElementsByName("Nome do elemento")[0]		// Pega o primeiro elemento que possua aquele nome.
+
+		4 ) CLASS:
+		document.getElementsByClassName("nome da classe")[0]		// Pega o primeiro elemento daquela classe.
+
+		5) SELETOR (MAIS PRÁTICO):
+		document.querySelector("div.msg")				// Utiliza o esquema de selecão do css.
+
+		EX:	
+			
+			<imput type="number" name="n1">
+			<script>
+				var tn1 = document.querySelector(div#n1)
+				var num1 = Number(tn1.value)			// Para pegar apenas o valor do elemnto é necessário o .value.
+			</script>
+		
+
+	-- CONCATENACÃO:
+	
+		var nome, idade, nota
+		nome = "Felipe"
+		idade = 20
+		nota = 8.2
+
+		"O aluno " + nome + " de " + idade + " anos tirou" + nota 
+		`O aluno ${nome} de ${anos} anos tirou ${nota}`
+
+-----VARIAVEIS
+
+	----- DECLARAÇÃO DE VARIAVEIS
+		/* 
+		O JavaScript possui algumas regras diderentes de declaração de variaveis em relaçao a outras linguagens:
+		1) Pode começar com letra, $ ou _.
+		2) Não pode começar com números.
+		3) É possivél usar letras, numeros, acentos e símbolos.
+		4) Não pode conter espaços e não pode ser uma palavra reservada.
+		*/
+ 			
+		var nome = "Felipe"
+
+		ou
+
+		var nome
+		nome = "felipe"
+
+		// Ao invés de var pode ser usado o let.
+
+	----- TIPOS DE VARIAVEIS
+		
+		/* 
+		Para descobrir o tipo de variavél usa-se o typeof:
+		var nome = "Felipe"
+		typeof nome 	// Retorna string.
+		*/
+
+		STR:		var String = "bla";
+
+		NUMBER:		var Int = 10; var double = 10.1;
+
+		BOOLEAM: 	var booleam = false/true;
+
+		ARRAY:		var nome = []/{};
+
+		OBJETO:		var animal = {}/[];
+
+	----- CONVERSÃO:	
+		
+		STRING -> NUMBER:
+
+			var n1 = Number.parseInt(window.prompt("Numero 1: "))		// Converte para int.
+ 			ou
+			var n2 = Number.parseFloat(window.prompt("Numero 2: "))		// Converte para float.
+			ou 
+			var n3 = Number(window.prompt("Numero 3: "))			// Converte para os dois.	
+		
+		NUMBER -> STRING:
+		
+			var n1 = 28
+	
+			String(n1)
+			ou
+			n1.toString()	
+		
+		// O prompt retorna conteudo do elemento em forma de string.
+	
+
+	----- ARRAY:
+		
+		Definindo um array:
+			let num = []
+		
+		Acrescentando elementos ao array:
+			num.push(x)
+
+		Extenssão do Array:
+			num.length
+
+		Organizando o array:
+			num.sort()
+		
+		Buscano um valor no array:
+			num.indexOf(x)
+
+		Removendo valores:
+		
+			-> num.shift()		Remove o primeiro elemnto.
+			-> num.pop()		Remove o último elemento.
+			-> num.splice(x, y)	Remove o elemento da posição x até x+y. 
+
+	----- OBJETO:
+
+		var animal = {};
+		
+		var amigos = {nome:"jose", sexo:"M", idade:20, engordar(){}}
+	
+		animal.nome = "dog";
+		animal.peso = "24kg";
+		animal.idade = 23;
+
+		ou
+	
+		animal['nome'] = "dog";	
+		animal['peso'] = "24kg";
+		animal['idade'] = 23;	
+	
+		ou
+
+		animal.nome = {};
+
+		animal.nome[0] = "felipe";
+		animal.nome[1] = "guilherme";
+
+	----- FUNCÕES DE VARIAVEIS:	
+
+		1) n.length:
+			// Retorna o comprimento da variavel.
+			EX:
+			
+			var nome = "Felipe"
+			nome.length	//6.
+
+		2) s.toUpperCase():
+			// Transforma minuúculas em maiúsculas.
+
+
+		3) s.toLowerCase():
+			// Transforma todas as maiúsculas em minúsculas.
+
+		4) n.toFixed(x):
+			// Arredonda números flutuantes em x casas.
+			EX:
+
+			var num = 28.5
+			num.toFixed(2)	// Retorna 28.50
+
+		5) s.replace('.', ','):
+			// troca todos os pontos por vírgulas.
+			EX:
+
+			var num = 28.5
+			num.toFixed(2).replace('.', ',')	// Retorna 28,50
+
+		6) n1.toLocaleString():
+			// localiza uma forma de string como por exemplo o real.
+			EX:
+
+			var num = 1545.5
+			num.toFixed(2).replace('.', ',')
+			num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) 	// Retorna R$ 1,545.50
+			num.toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) 	// Retorna US$ 1,545.50
+
+
+----- OPERADORES:
+
+	----- OPERADORES ARITIMÉTICOS:
+
+		+	->	Soma.
+		-	->	Subtração.
+		*	->	Multiplicação.
+		/	-> 	Divisão
+		%	->	Módulo (resto da divisão).
+		**	-> 	Elevado.
+	
+		/*
+		Todos são válidos:
+		n +=
+		n ++
+		n --
+		n -=
+		n *=
+		n /=
+		n %=
+		n **=
+		 */
+
+	----- OPERADORES RELACIONAIS:
+	
+		>	->	Maior que.
+		<	->	Menor que.
+		>=	->	Maior ou igual.
+		<=	->	Menor ou igual.
+		==	->	Igual.
+		===	->	Identico.
+		!=	->	Diferente.
+
+
+	----- OPERADORES LÓGICOS:
+
+		!	->	Negação (NOT).
+		&&	->	Conjunção (AND).
+		||	->	Disjunção (OR).
+
+	----- OPERADOR TRENÁRIO:
+		
+		// Usado em estruturas de condições
+		teste ? True : False
+
+	----- PRECEDENCIA:
+		() -> ** -> (*, /, %) -> (+, -) -> (>, <, >=, <=, ==, ===, !=) -> ! -> && -> ||
+
+
+----- ESTRUTURA CONDICIONAL:
+
+	SIMPLES:
+	
+		if(condição){
+			True
+		} else {
+			False
+		}
+ 	
+	ANINHADA: 
+		
+		if(condição_1){
+			True
+		} else {
+			if(condição_2){
+				True
+			} else {
+				False
+			}
+			False
+		}
+
+	COMPOSTA:
+	
+		if(condição_1){
+			x = y
+		} else if (condição_2) {
+			x = z
+		} else (condição_3){
+			x = w
+		}
+
+	MÚLTIPLA:
+		
+		var variavel = \\ 0 ou 1 ou 2 ou 3 ou x
+
+		switch (variavel){
+		
+			case 1:
+				...
+				break
+
+			case 2:
+				...
+				break
+			
+			case 3:
+				...
+				break
+
+			...
+
+			case x:
+				...
+				break
+		
+			default:
+	
+		}
+
+
+----- ESTRUTURAS DE REPETIÇÃO:
+	
+	----- while:
+		
+		-> Teste lógico no início:
+
+			while (condição){
+			...
+			}
+
+			var i = 0
+			while (i <= 5){
+				console.log(i)
+			}
+
+		-> Teste lógico no fim (do):
+			
+			do{
+			...
+			} while (condição)
+		
+			var i = 0
+			do{
+				console.log(i)
+			} while (i <= 5)
+
+	----- for:
+
+		for(inicio; teste; incremento){
+		...
+		}
+
+		for(var i = 0; i <= 5; I++){
+			console.log(i)
+		}
+
+		for(let num in pos){
+			console.log(num[pos])
+		}
+		
+----- FUNÇÕES
+	----- Declaracão:
+		
+		function bla(){
+			//código
+		}
+
+		->EX HTML:	
+					
+			<div id="area" onclick="clicar()">
+				Interaja...
+			</div
+			<script>
+				function clicar(){
+					var a = window.document.getElementById("area")
+					a.innerText = "Voce clicou em mim!"
+				}
+			</scritp>
+
+		->EX OBJETO:	
+	
+			objeto.função_do_objeto = function(){
+				código a ser executado
+			}
+
+		->EX VARIAVEL:
+		
+			var v = function(x){
+				return x*2
+			}
+
+	----- Passagem de parametros:
+		
+		var nome1 = "Fiorentin"
+		var nome2 = "Ghizoni"
+	
+		function ola (name1="fulano", name2="ciclano"){
+			window.alert("Ola ${name1} e ${name2}")
+		}
+	
+		ola(nome1, nome2)
+
+		var peso = 85.4
+
+		function engordar(p=0){
+			this.peso += p		# Referencia ao objeto.
+		}
+
+	----- Retorno:
+		
+		function parimp (num){
+			if (num % 2 == 0){
+				return "par"
+			} else {
+				return "impar"
+			}
+		}
+
+
+
+	1) addEventListener():
+		// Sua funcão é executar alguma outra funcão quando ocorrer um determinado evento.
+		EX:	
+		
+			<div id="area"">
+				Interaja...
+			</div
+			<script>
+				var a = window.document.getElementById("area")
+				a.addEventListener("area", clicar)
+		 
+				function clicar(){
+					a.innerText = "Voce clicou em mim!"
+				}
+			</scritp>
+
+
+----- HTML:
+
+	1) createElement:
+		// Cria o elemento html:
+		var img = document.createElement('img')
+
+	2) setAtrribute:
+		// Define o valor dos atributos do elemento criado:
+		img.setAttribute("id", "foto")
+		img.setAttribute("src", "foto-bebe.png")
+
+(NODE)--->
+
+	laço de repetição:
+
+	1) setInterval(function() => {}, 1000)	// Roda a função a cada segundo.
+		EX:
+			setInterval(() => {
+
+				const { Console } = require('console')
+				const os = require('os')
+				const { freemem, totalmem} = os
+
+
+				const total = parseInt(totalmem() / 1024 / 1024)
+				const mem = parseInt(freemem() / 1024 / 1024)
+				const percents = parseInt((mem / total) * 100)
+
+
+
+				const stats = {
+					free: `${mem} MB`,
+				    	total: `${total} MB`,
+				 	usage: `${percents} %`
+				}
+
+				console.log("===== MEMORY STATS =====")
+				console.table(stats)
+				console.log("========================")
+	
+			}, 1000)	// Roda a função a cada segundo.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
