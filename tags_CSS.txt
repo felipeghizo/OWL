@@ -11,7 +11,7 @@
 	www.prefixer.com para sites mais antigos.
 
 	
-	EspaÁo representa mudanÁa de parametro.
+	Espa√ßo representa mudan√ßa de parametro.
 
 ----- COMENTARIOS EM CSS:
 
@@ -22,7 +22,7 @@
 ----- CODIGO BASE:
 
 	p {							# Seletor: indicam os elementos aos quais a regra se aplica.
-		font-family:Arial;}				# DeclaraÁıes: idicam como os elementos referidos no seletor devem ser estilizados.
+		font-family:Arial;}				# Declara√ß√µes: idicam como os elementos referidos no seletor devem ser estilizados.
 
 	EX:
 
@@ -30,7 +30,7 @@
 		font-family: Arial;
 		color: yellow;}
 
-	<span style=" "> e </style>				# Dentro do prÛprio html.
+	<span style=" "> e </style>				# Dentro do pr√≥prio html.
 
 ----------------------------------------
 
@@ -38,7 +38,7 @@
 
 		<head>
 		<title> externo </title>
-		<link href="css/style.css" type="text/css" rel="stylesheet"/> 						# href="caminho para o arquivo css/styles" type="tipo de documento para que o qual o link aponta. Ovalor deve ser text/css." rel="relaÁ„o entre a pagina html e o arquivo para qual o link aponta, se apontar para um arquivo css deve ser stylesheet".
+		<link href="css/style.css" type="text/css" rel="stylesheet"/> 						# href="caminho para o arquivo css/styles" type="tipo de documento para que o qual o link aponta. Ovalor deve ser text/css." rel="rela√ß√£o entre a pagina html e o arquivo para qual o link aponta, se apontar para um arquivo css deve ser stylesheet".
 	</head>
 
 ----- CSS INTERNA:
@@ -60,37 +60,37 @@
 
 	(Seletores de classe):		1).note{} / 2) p.note{}		1) Seleciona qualquer elemnto cujo class tem valor .note / 2) seleciona somente elemntos <p> cujo class tem valor .note
 
-	(Seletor de ID):		#exemple{}			Seleciona o atributo cujo valor ID recebe exemple (CADA ELEMENTO DEVE POSSUIR SEU PR”PRIO ID, USAR CLASS).
+	(Seletor de ID):		#exemple{}			Seleciona o atributo cujo valor ID recebe exemple (CADA ELEMENTO DEVE POSSUIR SEU PR√ìPRIO ID, USAR CLASS).
 
 	(Seletor de filho):		li>a{}				Seleciona apenas os elementos <a> que sao filhos de <li>.
 
 	(Seletor de descendente):	p a {}				Seleciona quaisquer elementos <a> que residem dentro de um elemento <p>, mesmo se houver outros elemntos aninhados entre eles.
 
-	(Seletor de irm„o adjacente):	h1+p{}				Seleciona o primeiro elemnto <p> depois de qualquer elemento <h1>.
+	(Seletor de irm√£o adjacente):	h1+p{}				Seleciona o primeiro elemnto <p> depois de qualquer elemento <h1>.
 
-	(Seletor de irm„o geral):	h1~p{}				Seleciona quaisquer elementos <p> que s„o irm„os de <h1>.
+	(Seletor de irm√£o geral):	h1~p{}				Seleciona quaisquer elementos <p> que s√£o irm√£os de <h1>.
 
-	(Seletor de sem classes/ID):	a[href="link"]{}		Seleciona o 'a' que possui o href com valor de 'link'. Caso queira pegar apenas uma palavra do link use: [href*="palavra"](se estiver so pal ja pega), caso queira pegar apenas uma palavra dentro da attr use: [attr~="palavra"] (necessita ser a palavra inteira), caso queira pegar uma attr que comeÁe com uma palavra e tenha outra separando-as com um traÁo (palavra-blablabka) se: [attr|="palavra"], caso queira pegar a primeira palavra da attr apenas pela metade use: [attr^="pala"], caso queira pegar a ultima palavra da attr (palavrablabla) use: [attr$="blabla"]
+	(Seletor de sem classes/ID):	a[href="link"]{}		Seleciona o 'a' que possui o href com valor de 'link'. Caso queira pegar apenas uma palavra do link use: [href*="palavra"](se estiver so pal ja pega), caso queira pegar apenas uma palavra dentro da attr use: [attr~="palavra"] (necessita ser a palavra inteira), caso queira pegar uma attr que come√ße com uma palavra e tenha outra separando-as com um tra√ßo (palavra-blablabka) se: [attr|="palavra"], caso queira pegar a primeira palavra da attr apenas pela metade use: [attr^="pala"], caso queira pegar a ultima palavra da attr (palavrablabla) use: [attr$="blabla"]
 
 ----- SELETOR DE ATRIBUTOS:
 
 		EXISTENCIA		[]		p[class]		Seleciona qualquer elemento <p> com um atributo chamado class.
 
-		IGUALDADE		[=]		p[class="dog"]		Seleciona qualquer elemento <p> com um atributo chamado class cujo valor È dog.
+		IGUALDADE		[=]		p[class="dog"]		Seleciona qualquer elemento <p> com um atributo chamado class cujo valor √© dog.
 																
-		ESPA«O			[~=]		p[class~="dog"]		Seleciona qualquer elemento <p>	com um atributo class cujo valor È uma lista de palavras separadas por um espaÁo, uma das quais È dog.									
+		ESPA√áO			[~=]		p[class~="dog"]		Seleciona qualquer elemento <p>	com um atributo class cujo valor √© uma lista de palavras separadas por um espa√ßo, uma das quais √© dog.									
 																						
-		PREFIXO			[^=]		p[attr^="d"]		Seleciona qualquer elemento <p>	com um atributo cujo o valor comeÁa com a letra'd'.														
+		PREFIXO			[^=]		p[attr^="d"]		Seleciona qualquer elemento <p>	com um atributo cujo o valor come√ßa com a letra'd'.														
 																	
-		SUBSTRING		[*=]		p[attr*="do"]		Seleciona qualquer elemento <p>	com um atributo cujo valor contÈm as letras 'do'.													
+		SUBSTRING		[*=]		p[attr*="do"]		Seleciona qualquer elemento <p>	com um atributo cujo valor cont√©m as letras 'do'.													
 																			
 		SUFIXO			[$=] 	 	p[attr$="g"]		Seleciona qualquer elemento <p>	com um atributo cujo valor termina com a letra 'g'.											
 		
------ REGRAS DE PRECED NCIA EM CASCATA:
+----- REGRAS DE PRECED√äNCIA EM CASCATA:
 
-	(Ÿltima regra):		Se dois seletores forem identicos o ˙ltimo tera preferÍncia.
+	(√ôltima regra):		Se dois seletores forem identicos o √∫ltimo tera prefer√™ncia.
 
-	(Especifidade):		Se um seletor for mais especifico que o outro esse tera preferÍncia.
+	(Especifidade):		Se um seletor for mais especifico que o outro esse tera prefer√™ncia.
 
 	(Importante): 		Pode-se adicionar !important a um elemento e esse tera preferencia sobre outros elementos iguais.
 
@@ -103,48 +103,48 @@
 
 	h1{
 	
-		color:DarkCyan;/#ee3e80;/rgb(100,100,90);		# Valores rgb usam a quantidade de vermelho, azul e verde para expressar uma cor / CÛdigos exadecimais usam a quantidade de vermelho, azul e verde para expressar uma cor / Nomes de cores.
+		color:DarkCyan;/#ee3e80;/rgb(100,100,90);		# Valores rgb usam a quantidade de vermelho, azul e verde para expressar uma cor / C√≥digos exadecimais usam a quantidade de vermelho, azul e verde para expressar uma cor / Nomes de cores.
 			
 		background-color:DarkCyan;/#ee3e80;/rgb(100,100,90); 	# Define a cor de fundo do bloco em que for escrito.
 
 		opacity:0.5; / background-color:rgba(0,0,0,0.5);	# A opacidade recebe valores entre 0 e 1.
 
-		/* css3 background-color: hsla(0,100%,100%,0.5);	# Matiz(0∞atÈ360∞), saturaÁ„o, luminosidade(50% È normal) e alfa (entre 0 e 1 [para a transparencia]).
+		/* css3 background-color: hsla(0,100%,100%,0.5);	# Matiz(0¬∞at√©360¬∞), satura√ß√£o, luminosidade(50% √© normal) e alfa (entre 0 e 1 [para a transparencia]).
 	}
 
-	----- DegradÍ:
+	----- Degrad√™:
 		
-		background-image: linear-gradient(direÁ„o, cor 1 10%, cor x+1 90%)	# DireÁ„o: (to right; to top; to left; to bottom) ou (90deg; 180deg; 270deg; 360deg) e (cores e quantidades em que aparecem).
-		background-image: radial-gradient(circle, cor 1, cor x+1)		# CÌrculo degradÍ.
+		background-image: linear-gradient(dire√ß√£o, cor 1 10%, cor x+1 90%)	# Dire√ß√£o: (to right; to top; to left; to bottom) ou (90deg; 180deg; 270deg; 360deg) e (cores e quantidades em que aparecem).
+		background-image: radial-gradient(circle, cor 1, cor x+1)		# C√≠rculo degrad√™.
 
 ----------------------------------------
 
 
 ----- TIPOGRAFIA (fontes):
 
-	ANOTA«’ES:
+	ANOTA√á√ïES:
 	
-	TIPO  	-> TYPOS (impress„o).
-	GRAFIA 	-> GRAPHÕA (escrita).
+	TIPO  	-> TYPOS (impress√£o).
+	GRAFIA 	-> GRAPH√çA (escrita).
 	Tipografia = Estudo de como escrever (estudo dos tipos).
 
 	ALTURAS:
-		Altura-x: Todas as letras min˙sculas de uma fonte s„o baseadas no x min˙sculo dessa fonte.
-		Altura das Mai˙culas.
+		Altura-x: Todas as letras min√∫sculas de uma fonte s√£o baseadas no x min√∫sculo dessa fonte.
+		Altura das Mai√∫culas.
 		Ascendente: Aquilo que vaza para cima (bx).
 		Descendente: Aquilo que vaza para baixo (qx).
-		Corpo: Desde o menor descenente atÈ o maior ascentente(mai˙scula).
+		Corpo: Desde o menor descenente at√© o maior ascentente(mai√∫scula).
 	
 	PARTES DAS LETRAS:
 		Haste K	(|)
 		Filete Ae (-)
-		Espor„o b (PÈ de apio)
+		Espor√£o b (P√© de apio)
 		Arco n 
-		VÈrtice VA
+		V√©rtice VA
 		Terminal r
-		BraÁo K	(/)
+		Bra√ßo K	(/)
 		Perna K (\)
-		PÈ(serifa) AK
+		P√©(serifa) AK
 		Espinha S
 		Barriga b
 		Olho oq
@@ -161,19 +161,19 @@
 		
 		font-family: Arial, Helvetica, sans-serif;		# Pode-se usar mais de um tipo de fonte devido ao fato de que o usuario talvez nao tenha a fonte instalada, caso isso ocorra seguira a sequencia (CSS web safe conbinations).
 		
-		font-size: 12px/200%/1.3em;}				# Define o tamanho da fonte. Pode ser atravÈs de pixels (padr„o È 16px), percentagens(100% = 16px) e EMS. 
+		font-size: 12px/200%/1.3em;}				# Define o tamanho da fonte. Pode ser atrav√©s de pixels (padr√£o √© 16px), percentagens(100% = 16px) e EMS. 
 		/*
 		Medidas absolutas:
-			cm (centÌmetro), 
-			mm (milÌmetro), 
+			cm (cent√≠metro), 
+			mm (mil√≠metro), 
 			in (polegada "2,54cm"),
-			-> px (pixel),		# Mais aconselh·vel.
+			-> px (pixel),		# Mais aconselh√°vel.
 			pt (ponto),
 			pc (paica).
 
 		Medidas relativas:
-			-> em(relativo ao m mai˙sculo e uma determinada fonte "16px = 1em"),		# Mais aconselh·vel.
-			ex(relativo ao x mai˙sculo e uma determinada fonte), 
+			-> em(relativo ao m mai√∫sculo e uma determinada fonte "16px = 1em"),		# Mais aconselh√°vel.
+			ex(relativo ao x mai√∫sculo e uma determinada fonte), 
 			rem(relativo ao root configurado no body), 
 			vw(view port "largura do dispositivo"), 
 			vh(altura do dispositivo), 
@@ -204,7 +204,7 @@
 		
 	--------------------
 
-	DECORA«√O DA FONTE:	
+	DECORA√á√ÉO DA FONTE:	
 		
 	font-decoration:
 		underline		# Sublinha.
@@ -252,7 +252,7 @@
 
 	ALINHANDO TEXTOS:
 	
-	text-inent: 20px; (comeÁo de par·grafo).	
+	text-inent: 20px; (come√ßo de par√°grafo).	
 
 	text-aling: 
 		left
@@ -294,11 +294,11 @@
 	
 	p{
 
-		line-height: 1.4em;}					# … a diferenÁa entre a altura da letra e da linha.
+		line-height: 1.4em;}					# √â a diferen√ßa entre a altura da letra e da linha.
 
 	--------------------	
 
-	ESPA«AMENTO ENTRE LETRAS E PALAVRAS:
+	ESPA√áAMENTO ENTRE LETRAS E PALAVRAS:
 	
 	h1, h2{
 
@@ -314,7 +314,7 @@
 
 	.credts{
 
-		text-shadow: 1px 1px 0px #eeeeee;}			# 1∞ indica a distancia na horizontal. 2∞ indica a distancia na vertica. 3∞ quantidade de desfoque. 4∞ cor. 
+		text-shadow: 1px 1px 0px #eeeeee;}			# 1¬∞ indica a distancia na horizontal. 2¬∞ indica a distancia na vertica. 3¬∞ quantidade de desfoque. 4¬∞ cor. 
 
 	--------------------
 ----------------------------------------	
@@ -325,7 +325,7 @@
 
 		color: deeppink;}
 	
-	:visited{							# Estilo para links j· visitados.
+	:visited{							# Estilo para links j√° visitados.
 
 		color: black;}
 
@@ -368,7 +368,7 @@
 
 		contente ' felipe ';}
 
-	::after{							# ApÛs todos os elementos selecionados ira adicionar oq estiver dentro do content (pode usar 'before' tbm).
+	::after{							# Ap√≥s todos os elementos selecionados ira adicionar oq estiver dentro do content (pode usar 'before' tbm).
 
 		content: ' ghizoni.';}				
 
@@ -376,8 +376,8 @@
 ----------------------------------------
 
 ----- MOUSE:
-	# Event Reference para mais opcıes. 
-	# Funcıes desenvolvidas em JS.
+	# Event Reference para mais opc√µes. 
+	# Func√µes desenvolvidas em JS.
 	
 	1) mouseenter
 		Quando o mouse entra na div.
@@ -388,15 +388,15 @@
 		<div mouseenter="MouseMoveu()">
 
 	3) mousedown
-		Quando o mouse È clicado e seu bot„o È segurado dentro da div.
+		Quando o mouse √© clicado e seu bot√£o √© segurado dentro da div.
 		<div mouseenter="MouseSegurou()">
 
 	4) mouseup
-		Quando o bot„o do mouse È solto dentro da div.
+		Quando o bot√£o do mouse √© solto dentro da div.
 		<div mouseenter="MouseSoltou()">
 
 	5) click
-		Quando È feito um click dentro da div.
+		Quando √© feito um click dentro da div.
 		<div mouseenter="MouseClocou()">
 
 	6) mouseout
@@ -419,9 +419,9 @@
 
 
 ----- CAIXAS:
-	Cada caixa possui 3 propriedades disponÌveis que podem ser ajustadas para controlar sua aparÍncia:
+	Cada caixa possui 3 propriedades dispon√≠veis que podem ser ajustadas para controlar sua apar√™ncia:
 
-	1∞) BORDA: A borda contorna e delimita uma caixa.
+	1¬∞) BORDA: A borda contorna e delimita uma caixa.
 
 		LARGURA DE BORDA
 			
@@ -449,11 +449,11 @@
 					      dotted;		# Um serie de quadrados
 					      dashed;		# Uma serie de linhas curtas.
 					      double;		# Duas linhas continuas.
-					      groove;		# Entalhado na p·gina.
+					      groove;		# Entalhado na p√°gina.
 					      ridge;		# Projetar-se para fora da tela.
 					      inset;		# Parece embutido na tela ( top e left mais graves que bottom e right).
 					      outset;		# Saindo da tela (bottom e right mais graves que top e left).
-					      hidden/none;}	# InvisÌvel.
+					      hidden/none;}	# Invis√≠vel.
 					      	
 		COR DA BORDA
 
@@ -468,22 +468,22 @@
 
 				border-color: 	white[top] cyan[right] green[bottom] red[left]}
 
-		ABREVIA«√O	
+		ABREVIA√á√ÉO	
 
 			.class{
 
 				border: 3px[largura] dotted[style] cyan[cor]}
 
-		FORMATA«√O
+		FORMATA√á√ÉO
 
 			.class{
 			
-				box-sizing: border-box;  	# Faz com que a borda ocupe o espaÁo interior da div.
+				box-sizing: border-box;  	# Faz com que a borda ocupe o espa√ßo interior da div.
 
 				appearance: none;}		# Muda o padrao de botoes do site, tira a borda e a seta do select por exemplo.
 	--------------------
 
-	2∞) MARGEM: Margens contornam e demilitam as bordas.
+	2¬∞) MARGEM: Margens contornam e demilitam as bordas.
 
 		MARGEM
 
@@ -501,7 +501,7 @@
 				margin: 0 auto;	#deixa a caixa centralizada}
 	--------------------
 
-	3∞) PREENCHIMENTO: EspaÁo entre a borda de uma caixa e seu conteudo.
+	3¬∞) PREENCHIMENTO: Espa√ßo entre a borda de uma caixa e seu conteudo.
 
 		PREENCHIMENTO
 			
@@ -518,7 +518,7 @@
 	--------------------
 		
 			
-	DIMENS’ES DA CAIXA: 
+	DIMENS√ïES DA CAIXA: 
 
 	div.box{
 
@@ -552,13 +552,13 @@
 
 	--------------------
 
-	EXCESSO DE CONTE⁄DO:
+	EXCESSO DE CONTE√öDO:
 
 	tr.description{
 
-		overflow: hidden;		# Barra lateral de scroll nao existe e aquilo que nao coube nao È mostrado.
+		overflow: hidden;		# Barra lateral de scroll nao existe e aquilo que nao coube nao √© mostrado.
 	
-		overflow: scroll;}		# … criada uma barra lateral unicamente para o texto.
+		overflow: scroll;}		# √â criada uma barra lateral unicamente para o texto.
 	
 	--------------------
 
@@ -569,7 +569,7 @@
 		display: inline;  		# Bloco vira linha e ira seguir na mesma linha. 
 			 block;			# Linha vira bloco e passara para a linha de baixo.
 			 inline-block;		# Bloco vira linha mas mantem as caracteristicas de um bloco.( quando usado cria uma margin-right: 4px; e pode bugar, acrescentando margin-right: -4px; desbuga),( bom usar 'text-alaing:center;' junto).
-			 none; 			# Oculta um elemento da p·gina.
+			 none; 			# Oculta um elemento da p√°gina.
 
 	--------------------
 
@@ -597,7 +597,7 @@ CSS3:
 	
 	SOMBRAS DE CAIXA
 
-		box-shadow: 5px 5px 5px 5px #777777:	# Deslocamento horizontal, deslocamento vertical, dist‚ncia do desfoque, difus„o da sombra.
+		box-shadow: 5px 5px 5px 5px #777777:	# Deslocamento horizontal, deslocamento vertical, dist√¢ncia do desfoque, difus√£o da sombra.
 		
 		-moz-border-shadow:			# Auxilia navegadores mais antigos (Chrome, Firefox e Safari).
 
@@ -621,12 +621,12 @@ CSS3:
 		-webkit-border-radius:	# Auxilia navegadores mais antigos (Chrome, Firefox e Safari).
 
 
-	FORMAS ELÕPTICAS
+	FORMAS EL√çPTICAS
 
 		border-radius: 80px 50px;		# Horizontal e vertical.
 
 		padding: 0px;
-		border-radius: 100px;			# CÌrculo recebe a mesma altura do quadrado.
+		border-radius: 100px;			# C√≠rculo recebe a mesma altura do quadrado.
 
 
 ------------------LISTAS E FORMULARIOS-------
@@ -666,22 +666,22 @@ CSS3:
 
 	POSICIONANDO O MARCADOR
 
-		list-style-position: outside/inside;		# outside È normal e inside entra na linha.
+		list-style-position: outside/inside;		# outside √© normal e inside entra na linha.
 
 
-	ABREVIA«√O DE LISTA
+	ABREVIA√á√ÉO DE LISTA
 		
 		list-style: inside circle;	
 
 				
-	BORDAS EM C…LULAS VAZIAS
+	BORDAS EM C√âLULAS VAZIAS
 
 		empty-cells: show/hide/inherit;  		# Mostra, esconde, caso a tabela(1) esteja alinhada dentro de outra tabela(2) ela ira receber as regras dessa segunda tabela.
 	
-	ESPA«OS ENTRE C…LULAS
+	ESPA√áOS ENTRE C√âLULAS
 
 		border-spacing: 5px 15px;			# Vertical e horizontal;			
-		border-collapse: collapse/separate;		# CÈlulas vazias e border-spacing ser„o desconsiderados / ira separar as cÈlulas e border-spacing e cÈlulas vazias ser„o considerados.		
+		border-collapse: collapse/separate;		# C√©lulas vazias e border-spacing ser√£o desconsiderados / ira separar as c√©lulas e border-spacing e c√©lulas vazias ser√£o considerados.		
 				
 	
 	ESTILO DE CURSOR
@@ -699,11 +699,11 @@ CSS3:
 
 LAYOUT
 
-	POSI«√O
+	POSI√á√ÉO
 
 		position: static;		# Segue o fluxo normal do html.
-			  relative;		# Move um elemento em relaÁ„o ao local que ele estaria no fluxo normal.
-			  absolute;		# A caixa se comporata apenas em relaÁ„o a pagina e nao aos outros blocos.
+			  relative;		# Move um elemento em rela√ß√£o ao local que ele estaria no fluxo normal.
+			  absolute;		# A caixa se comporata apenas em rela√ß√£o a pagina e nao aos outros blocos.
 			  fixed;		# O elemento se torna fixo no fluxo da pagina, ou seja, o scroll nao faz o elemento sair de vista.
 
 		left: 0px;
@@ -713,15 +713,15 @@ LAYOUT
 
 	SOBREPONDO ELEMENTOS
 
-		z-index: 10;			# Quanto maior o valor de z-index mais propriedade o elemento tem em relÁ„o aos outros.
+		z-index: 10;			# Quanto maior o valor de z-index mais propriedade o elemento tem em rel√ß√£o aos outros.
 
 	ELEMENTOS FLUTUANTES
 
-		display:block;			# OBRIGAT”RIO O ELEMENTO ESTAR EM BLOCO.
+		display:block;			# OBRIGAT√ìRIO O ELEMENTO ESTAR EM BLOCO.
 
-		float: right;			# O resto do conteiner se alocar· ao redor do elemento.
+		float: right;			# O resto do conteiner se alocar√° ao redor do elemento.
 		       left;
-		width: 100px;			# OBRIGAT”RIO.
+		width: 100px;			# OBRIGAT√ìRIO.
 
 		colocar no html: <div style="clear:both;"></div> no fim do codigo.
 
@@ -738,9 +738,9 @@ LAYOUT
 
 				border: 1px solid #665544;}			 
 	
-			Se um elemento contÍiner contiver somente elementos flutuantes, alguns navegadores ir„o trat·-los como se tivessem 0 px de altura, fazendo a bordar parecer uma linha no topo.
+			Se um elemento cont√™iner contiver somente elementos flutuantes, alguns navegadores ir√£o trat√°-los como se tivessem 0 px de altura, fazendo a bordar parecer uma linha no topo.
 
-		SOLU«√O	
+		SOLU√á√ÉO	
 		
 			div {
 
@@ -759,14 +759,14 @@ LAYOUT
 
 				float: left;		# Posiciona as colunas uma do lado da outra.
 				width: 620px;		# Define a largura das colunas.
-				margin: 10px:}	   	# Cria um espaÁo entre as colunas.	
+				margin: 10px:}	   	# Cria um espa√ßo entre as colunas.	
 
 
 			.coluna2de2{
 
 				float: left;		# Posiciona as colunas uma do lado da outra.
 				width: 300px;		# Define a largura das colunas.
-				margin: 10px:}	   	# Cria um espaÁo entre as colunas.	
+				margin: 10px:}	   	# Cria um espa√ßo entre as colunas.	
 
 		MULTIPLAS FOLHAS DE ESTILO 
 
@@ -775,7 +775,7 @@ LAYOUT
 
 
 
-	background-image: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;		# url da imagem/ repetir ou nao/ width e heigh.(NAO PODE HAVER EPA«O ENTRE URL E ()).	
+	background-image: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;		# url da imagem/ repetir ou nao/ width e heigh.(NAO PODE HAVER EPA√áO ENTRE URL E ()).	
 	
 	repeat: 
 		
@@ -785,7 +785,7 @@ LAYOUT
 	
 	transition: background-color 1s;  
 
-	auto:		Usado para dimensıes.
+	auto:		Usado para dimens√µes.
 
 	inherit:	Ira herdar as caracteristicas do elemento pai.
 		EX:
@@ -809,11 +809,11 @@ LAYOUT
 		
 		cover; - Cobre tudo distorcendo a imagem (background-position nao fara efeito).
 
-		background-position: center 50px / 0 [esquerda] 0 [topo] ñ Como e onde a imagem de fundo È posicionada; 50px largura 50px altura. (Quando È um valor negativo se comporta inversamente ao normal).
+		background-position: center 50px / 0 [esquerda] 0 [topo] ¬ñ Como e onde a imagem de fundo √© posicionada; 50px largura 50px altura. (Quando √© um valor negativo se comporta inversamente ao normal).
 
-		contain; - Cobre tudo mas sem distorcer a imagem, oque pode criar espaÁos em branco. 
+		contain; - Cobre tudo mas sem distorcer a imagem, oque pode criar espa√ßos em branco. 
 			
-		background-position: center 50px / 0 [esquerda] 0 [topo] ñ Como e onde a imagem de fundo È posicionada; 50px largura 50px altura. (Quando È cover e o valor passar de 100%, 110% por exemplo, a imagem passa a se mover de maneira oposta como se fosse 90%). 
+		background-position: center 50px / 0 [esquerda] 0 [topo] ¬ñ Como e onde a imagem de fundo √© posicionada; 50px largura 50px altura. (Quando √© cover e o valor passar de 100%, 110% por exemplo, a imagem passa a se mover de maneira oposta como se fosse 90%). 
 	
 
 	background-attachment:
@@ -822,7 +822,7 @@ LAYOUT
 
 	background-clip:
 
-		padding-box;	# A box so comeÁa dps da borda
+		padding-box;	# A box so come√ßa dps da borda
 
 
 
@@ -832,12 +832,12 @@ LAYOUT
 	
 	.parent{
 
-		width:50%;		# Em relaÁ„o ao body.
+		width:50%;		# Em rela√ß√£o ao body.
 		height:400px;}
 
 	.son{
 			
-		width:50%;		# Em relaÁ„o ao .parente, oq equivale a 25% do body.
+		width:50%;		# Em rela√ß√£o ao .parente, oq equivale a 25% do body.
 		padding-top:25%;}	# Equivale a 100px, ou seja, 25% de 400px.
 
 ----------------------------------------
@@ -845,14 +845,14 @@ LAYOUT
 ----- CALCULOS: 
 	
 	CALC:
-	width: calc(porcentagem - / + *	 px);	# EspaÁo necess·rio entre o sinal e os numeros.
+	width: calc(porcentagem - / + *	 px);	# Espa√ßo necess√°rio entre o sinal e os numeros.
 
 	--------------------
 
 	VW E VH:
 
-	width: 100vw;			# vw = viewport width.	(N„o leva em conta o scroll bar vertical).
-	height: 100vh;			# vh = viewport height.	(N„o leva em conta o scroll bar horizontal).
+	width: 100vw;			# vw = viewport width.	(N√£o leva em conta o scroll bar vertical).
+	height: 100vh;			# vh = viewport height.	(N√£o leva em conta o scroll bar horizontal).
 
 	--------------------
 
